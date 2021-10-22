@@ -94,7 +94,7 @@ export default function Home(props) {
         </p>
         {visible ? (
           <div className='flex flex-col justify-center'>
-            <h2 className='text-4xl font-bold underline'>You are <span className={`${outcome == 'CORRECT' ? ('text-green-500') : ('text-red-500')}`}>{outcome}</span></h2>
+            <h2 className='text-4xl font-bold underline'>You are <span className={`${outcome == 'CORRECT' ? ('text-green-500 border-2 border-green-600') : ('text-red-500 border-2 border-red-600')}`}>{outcome}</span></h2>
             <p className="bg-green-300 p-10 rounded-xl m-8 p-8 border-t-2 text-4xl">
               {answer}
             </p></div>) : ('')
