@@ -143,7 +143,7 @@ export default function Home(props) {
         <p
           className="flex items-center justify-center"
         >
-          Made with ❤️+☕ by Nate
+          Made with ❤️ + ☕ by Nate
         </p>
       </footer>
     </div>
