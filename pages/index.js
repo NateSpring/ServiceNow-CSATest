@@ -140,14 +140,11 @@ export default function Home(props) {
       </main>
 
       <footer className="flex items-center justify-center w-full h-24 border-t">
-        <a
+        <p
           className="flex items-center justify-center"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
         >
-          Made with ❤️/☕ by Nate
-        </a>
+          Made with ❤️+☕ by Nate
+        </p>
       </footer>
     </div>
   )
