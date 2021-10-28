@@ -25,9 +25,9 @@ export default function Home(props) {
     setOutcome('')
     setPartytime(false)
 
-    let randomSet = props.data[getRandomInt(44)]
+    let randomSet = props.data[30]
     let optionsContainer = []
-    let op = randomSet.options.split(',')
+    let op = randomSet.options.split(",")
     op.map((ops) => {
       optionsContainer.push(ops.replace(/[^A-Za-z0-9\s\\_\\>]/g, ' '))
       console.log(ops)
