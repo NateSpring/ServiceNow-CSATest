@@ -27,15 +27,15 @@ export default function Home(props) {
 
     let randomSet = props.data[getRandomInt(43)]
 
-    // let optionsContainer = []
-    // let op = randomSet.options.split(",")
-    // op.map((ops) => {
-    //   optionsContainer.push(ops.replace(/[^A-Za-z0-9\s\\_\\>]/g, ' '))
-    //   console.log(ops)
-    // })
-    // setQuestion(randomSet.question.replace('\n', ' '))
-    // setOptions(optionsContainer)
-    // setAnswer(randomSet.answer.replace('\n', ' ').replace('Answer : ', ''))
+    let optionsContainer = []
+    let op = randomSet.options.split(",")
+    op.map((ops) => {
+      optionsContainer.push(ops.replace(/[^A-Za-z0-9\s\\_\\>]/g, ' '))
+      console.log(ops)
+    })
+    setQuestion(randomSet.question.replace('\n', ' '))
+    setOptions(optionsContainer)
+    setAnswer(randomSet.answer.replace('\n', ' ').replace('Answer : ', ''))
   }
 
 
