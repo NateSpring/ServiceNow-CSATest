@@ -16,6 +16,8 @@ export async function getSheetData() {
             range: 'csa', // sheet name
         });
 
+        console.log(response.data)
+
         const rows = response.data.values;
         if (rows.length) {
             return rows.map((row) => ({

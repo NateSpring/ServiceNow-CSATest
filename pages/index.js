@@ -25,16 +25,17 @@ export default function Home(props) {
     setOutcome('')
     setPartytime(false)
 
-    let randomSet = props.data[30]
-    let optionsContainer = []
-    let op = randomSet.options.split(",")
-    op.map((ops) => {
-      optionsContainer.push(ops.replace(/[^A-Za-z0-9\s\\_\\>]/g, ' '))
-      console.log(ops)
-    })
-    setQuestion(randomSet.question.replace('\n', ' '))
-    setOptions(optionsContainer)
-    setAnswer(randomSet.answer.replace('\n', ' ').replace('Answer : ', ''))
+    let randomSet = props.data[getRandomInt(43)]
+
+    // let optionsContainer = []
+    // let op = randomSet.options.split(",")
+    // op.map((ops) => {
+    //   optionsContainer.push(ops.replace(/[^A-Za-z0-9\s\\_\\>]/g, ' '))
+    //   console.log(ops)
+    // })
+    // setQuestion(randomSet.question.replace('\n', ' '))
+    // setOptions(optionsContainer)
+    // setAnswer(randomSet.answer.replace('\n', ' ').replace('Answer : ', ''))
   }
 
 
@@ -57,25 +58,25 @@ export default function Home(props) {
   const correctAnswer = () => {
     setPartytime(true)
     setOutcome('CORRECT')
-    updateScore()
+    // updateScore()
 
     setTimeout(() => {
       setPartytime(false)
     }, 3000)
   }
 
-  const updateScore = async () => {
-    const sendScore = await fetch('/api/score', {
-      method: 'POST',
-      body: JSON.stringify({
-        'person': 'Nate',
-        'score': 10
-      }),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-  }
+  // const updateScore = async () => {
+  //   const sendScore = await fetch('/api/score', {
+  //     method: 'POST',
+  //     body: JSON.stringify({
+  //       'person': 'Nate',
+  //       'score': 10
+  //     }),
+  //     headers: {
+  //       'Content-Type': 'application/json'
+  //     }
+  //   })
+  // }
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
